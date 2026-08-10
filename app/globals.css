@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  /* One centralized brand color keeps the logo, icons, CTAs and highlights matched. */
+  --brand: #e86c1f;
+  --brand-strong: #ff5a0a;
+  --cream: #f5f0e7;
+  --ink: #07100d;
+  --muted: #66706a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.25rem, 4.3vw, 4.9rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.dark-texture {
+  background-color: #06100c;
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(232, 108, 31, 0.06), transparent 31%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.018) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.012) 25%, transparent 25%);
+  background-size: auto, 24px 24px, 24px 24px;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid rgba(7, 16, 13, 0.14);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.72);
+  padding: 0.95rem 1rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.field::placeholder {
+  color: rgba(7, 16, 13, 0.42);
+}
+
+.field:focus {
+  border-color: var(--brand);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(232, 108, 31, 0.12);
+}
+
+.footer-heading {
+  margin-bottom: 1.1rem;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.footer-list a {
+  transition: color 180ms ease;
+}
+
+.footer-list a:hover {
+  color: white;
+}
+
+::selection {
+  background: var(--brand);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Lead funnel: pulse the phone field when a phone/email CTA sends the visitor
+   to the estimate form, reinforcing "leave your number, we'll call you back." */
+@keyframes leadPulse {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 12px color-mix(in srgb, var(--brand) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--brand) 0%, transparent); }
+}
+.lead-pulse { animation: leadPulse 1.3s ease-out 2; border-color: var(--brand) !important; }
