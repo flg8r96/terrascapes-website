@@ -3,6 +3,9 @@ import Script from "next/script";
 import "./globals.css";
 
 const GA4_ID = "G-13BMQSDZT6";
+// Ryan's Google Ads conversion tag — broke when the site moved off its old host;
+// this restores it. Pulled straight from Google Ads' own "Install a Google tag" screen.
+const GOOGLE_ADS_ID = "G-0P4TRGNZGR";
 
 const SITE_URL = "https://terrascapeslv.com";
 const TITLE = "TerraScapes Landscaping | Las Vegas Desert Landscape Design";
@@ -73,6 +76,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GA4_ID}');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
         {children}
