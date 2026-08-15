@@ -1,0 +1,19 @@
+#!/bin/sh
+# niftly3d push gate (no-cost enforcement of "all pushes require approval").
+# Blocks every direct `git push` from this repo. The ONLY sanctioned push path is the
+# approved autopush flow (autopush-helper.js), which runs the push with NIFTLY_AUTOPUSH=1
+# after Matt approves in #pushes. This stops agents (Dev Guy) from pushing main directly
+# and bypassing the gate. Not versioned by git itself -- installed into .git/hooks/
+# (run scripts/install-hooks.sh after clone).
+if [ "$NIFTLY_AUTOPUSH" = "1" ]; then
+  exit 0
+fi
+echo "" >&2
+echo "==============================================================" >&2
+echo " Direct push BLOCKED by the niftly3d push gate." >&2
+echo " Every push to main must be approved in #pushes and pushed via" >&2
+echo " the autopush flow. Nothing reaches production un-approved." >&2
+echo "" >&2
+echo " Emergency override (Matt only): NIFTLY_AUTOPUSH=1 git push ..." >&2
+echo "==============================================================" >&2
+exit 1
