@@ -123,7 +123,7 @@ export function Contact() {
         <aside className="rounded-md bg-[#07100d] p-8 text-white lg:p-10">
           <h3 className="font-serif text-3xl">Contact TerraScapes</h3>
           <div className="mt-8 grid gap-6 text-sm">
-            <a href="tel:+17026001167" className="flex items-start gap-4 text-white/75 transition hover:text-white">
+            <a href="#contact" className="flex items-start gap-4 text-white/75 transition hover:text-white">
               <Phone className="mt-0.5 h-5 w-5 text-[var(--brand)]" />
               <span><strong className="block text-white">(702) 600-1167</strong>Call or text</span>
             </a>

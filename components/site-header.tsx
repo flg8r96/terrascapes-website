@@ -36,7 +36,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a href="tel:+17026001167" className="flex items-center gap-2 text-sm font-semibold text-white">
+          <a href="#contact" className="flex items-center gap-2 text-sm font-semibold text-white">
             <Phone className="h-4 w-4" /> (702) 600-1167
           </a>
           <Button href="#contact" size="sm">Free Estimate</Button>
@@ -66,7 +66,11 @@ export function SiteHeader() {
                 {label}
               </a>
             ))}
-            <a href="tel:+17026001167" className="flex items-center gap-2 pt-2 font-semibold text-white">
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 pt-2 font-semibold text-white"
+            >
               <Phone className="h-4 w-4 text-[var(--brand)]" /> (702) 600-1167
             </a>
             <Button href="#contact" className="w-full" onClick={() => setOpen(false)}>Free Estimate</Button>

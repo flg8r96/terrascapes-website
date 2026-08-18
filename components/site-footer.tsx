@@ -35,7 +35,7 @@ export function SiteFooter() {
         <div>
           <h3 className="footer-heading">Contact</h3>
           <div className="grid gap-4 text-sm text-white/60">
-            <a href="tel:+17026001167" className="flex items-center gap-3 hover:text-white"><Phone className="h-4 w-4 text-[var(--brand)]" /> (702) 600-1167</a>
+            <a href="#contact" className="flex items-center gap-3 hover:text-white"><Phone className="h-4 w-4 text-[var(--brand)]" /> (702) 600-1167</a>
             <div className="flex items-start gap-3"><MapPin className="mt-0.5 h-4 w-4 text-[var(--brand)]" /> Licensed · Bonded · Insured<br />NV Lic. #0082269, #0094932</div>
           </div>
         </div>
