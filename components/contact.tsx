@@ -11,6 +11,14 @@ const LEAD_ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "/api/lead";
 
 type Status = "idle" | "sending" | "done" | "error";
 
+// gtag is declared as a plain global function by the inline script in app/layout.tsx
+// (not a module export), so it's reachable as window.gtag at runtime with no import.
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -49,6 +57,11 @@ export function Contact() {
       if (res.ok && json.ok) {
         setStatus("done");
         setMessage("Thanks — we’ll call you right back. If it’s urgent, call (702) 600-1167.");
+        // Fires into both GA4 properties configured in layout.tsx (analytics + Ads tag) —
+        // GA4's standard lead-gen event name. Nothing tracked conversion-side before this;
+        // Ryan's Ads campaign had no signal to optimize against. Still needs "generate_lead"
+        // marked as a key event in GA4 admin (UI-only step) for Ads to treat it as a conversion.
+        window.gtag?.("event", "generate_lead", { method: "website-contact-form" });
         form.reset();
       } else {
         setStatus("error");
