@@ -113,6 +113,68 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "seamless-indoor-outdoor-transitions-las-vegas",
+    title: "Seamless Indoor-Outdoor Transitions: Patio Design Ideas for Las Vegas Homes",
+    metaTitle: "Indoor-Outdoor Patio Design Las Vegas | TerraScapes Landscaping",
+    metaDescription:
+      "Flush thresholds, matching materials, and large-format pavers — how Las Vegas homeowners are blurring the line between indoor and outdoor living.",
+    publishedDate: "2026-08-20",
+    heroImage: "/images/backyard-after.jpg",
+    heroImageAlt: "Patio and backyard living space in a Las Vegas home",
+    excerpt:
+      "Flush thresholds, matching materials, and large-format pavers are turning Las Vegas patios into a real extension of the living room, not just a slab out back.",
+    relatedServiceSlug: "hardscaping",
+    sections: [
+      {
+        heading: "Flush thresholds",
+        body: "Setting the patio surface at the same height as interior flooring removes the visual and physical step between inside and outside, so the transition reads as one continuous space instead of two separate areas.",
+      },
+      {
+        heading: "Matching materials inside and out",
+        body: "Using a similar stone or tile pattern on the patio as what's already inside carries the same design language through the doorway, instead of the outdoor space feeling like an afterthought.",
+      },
+      {
+        heading: "Large-format pavers",
+        body: "Oversized paver slabs cut down on visible grout lines, giving a patio a cleaner, more modern look than smaller traditional pavers — and fewer joints means fewer places for weeds and settling to show up over time.",
+      },
+      {
+        heading: "Built on a base that holds up",
+        body: "None of this works long-term without the same engineered base prep that keeps any hardscape flat through Las Vegas' expansive soil and monsoon runoff — the visual effect depends on what's underneath it just as much as the surface itself.",
+      },
+    ],
+  },
+  {
+    slug: "multi-functional-outdoor-kitchens-las-vegas",
+    title: "Multi-Functional Outdoor Kitchens: What Las Vegas Homeowners Are Asking For",
+    metaTitle: "Outdoor Kitchen Design Las Vegas | TerraScapes Landscaping",
+    metaDescription:
+      "Outdoor kitchens are moving past a single grill — built-in seating, durable countertops, and layouts built to handle Las Vegas heat and real entertaining.",
+    publishedDate: "2026-08-20",
+    heroImage: "/images/service-outdoor.jpg",
+    heroImageAlt: "Outdoor kitchen and seating area in a Las Vegas backyard",
+    excerpt:
+      "Outdoor kitchens have moved past a single built-in grill — homeowners want real cooking capability, durable surfaces, and seating that's part of the design, not folding chairs pulled up after the fact.",
+    relatedServiceSlug: "outdoor-living-design",
+    sections: [
+      {
+        heading: "Beyond the grill",
+        body: "A built-in grill is still the starting point, but outdoor kitchens are increasingly designed with real counter space and storage around it, so cooking outside works the same way it does in an actual kitchen instead of hovering around one appliance.",
+      },
+      {
+        heading: "Countertops built for the heat",
+        body: "Surfaces need to hold up to direct desert sun and summer heat without cracking, fading, or becoming too hot to touch — material choice matters more here than it does in a shaded kitchen indoors.",
+      },
+      {
+        heading: "Seat walls instead of folding chairs",
+        body: "Retaining or seat walls built into the layout double as permanent seating around the kitchen and fire feature, so gathering space is part of the design instead of something dragged out for a party and put away after.",
+      },
+      {
+        heading: "Designed around how you actually entertain",
+        body: "The best outdoor kitchens are laid out around real use — how people move between cooking, seating, and the rest of the yard — not just where a grill happens to fit.",
+      },
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost {
