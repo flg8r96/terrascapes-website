@@ -14,6 +14,7 @@ const nav = [
   ["Before & After", "/#transformations"],
   ["About", "/#about"],
   ["Reviews", "/#reviews"],
+  ["Blog", "/blog"],
   ["Contact", "#contact"],
 ];
 
