@@ -5,11 +5,15 @@ import { useState } from "react";
 import { TerraScapesLogo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
+// Home-section anchors are prefixed with "/" so they still resolve correctly
+// when this header renders on a service page (e.g. /design/) instead of the
+// homepage itself. #contact is left bare — every page embeds its own Contact
+// section at that id, so it should always scroll locally.
 const nav = [
-  ["Services", "#services"],
-  ["Before & After", "#transformations"],
-  ["About", "#about"],
-  ["Reviews", "#reviews"],
+  ["Services", "/#services"],
+  ["Before & After", "/#transformations"],
+  ["About", "/#about"],
+  ["Reviews", "/#reviews"],
   ["Contact", "#contact"],
 ];
 
@@ -19,7 +23,7 @@ export function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 border-b border-white/10 bg-black/35 backdrop-blur-md">
       <div className="mx-auto flex h-[78px] max-w-[1440px] items-center justify-between px-5 lg:px-8">
-        <a href="#top" aria-label="TerraScapes home">
+        <a href="/#top" aria-label="TerraScapes home">
           <TerraScapesLogo compact />
         </a>
 

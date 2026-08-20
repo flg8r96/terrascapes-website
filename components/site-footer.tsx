@@ -15,20 +15,20 @@ export function SiteFooter() {
         <div>
           <h3 className="footer-heading">Services</h3>
           <ul className="footer-list">
-            <li>Landscape Design & Install</li>
-            <li>Hardscaping</li>
-            <li>Outdoor Living</li>
-            <li>Irrigation & Drip Systems</li>
-            <li>Turf Removal & Xeriscape</li>
-            <li>Maintenance</li>
+            <li><a href="/design">Landscape Design & Install</a></li>
+            <li><a href="/residential-landscaping">Hardscaping</a></li>
+            <li><a href="/outdoor-living-design">Outdoor Living</a></li>
+            <li><a href="/irrigation-drip-systems">Irrigation & Drip Systems</a></li>
+            <li><a href="/turf-removal-xeriscape">Turf Removal & Xeriscape</a></li>
+            <li><a href="/landscape-maintenance">Maintenance</a></li>
           </ul>
         </div>
         <div>
           <h3 className="footer-heading">Quick links</h3>
           <ul className="footer-list">
-            <li><a href="#transformations">Before & After</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/#transformations">Before & After</a></li>
+            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
