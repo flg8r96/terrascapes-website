@@ -64,7 +64,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
 
       <section className="dark-texture border-y border-white/10 px-5 py-16 lg:px-8">
         <div className="mx-auto max-w-[1440px] text-center">
-          <p className="eyebrow">Need this fixed?</p>
+          <p className="eyebrow">{post.ctaEyebrow ?? "Need this fixed?"}</p>
           <h2 className="mt-3 font-serif text-3xl text-white sm:text-4xl">{relatedService.navLabel}</h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/60">{relatedService.intro}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

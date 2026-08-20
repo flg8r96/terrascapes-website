@@ -9,6 +9,9 @@ export type BlogPost = {
   excerpt: string;
   // Slug into lib/service-pages.ts — the CTA at the bottom of the post links here.
   relatedServiceSlug: string;
+  // Overrides the CTA block's default "Need this fixed?" eyebrow — for posts that
+  // aren't about fixing a yard problem (e.g. a hiring-decision post).
+  ctaEyebrow?: string;
   sections: { heading: string; body: string }[];
 };
 
@@ -172,6 +175,38 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Designed around how you actually entertain",
         body: "The best outdoor kitchens are laid out around real use — how people move between cooking, seating, and the rest of the yard — not just where a grill happens to fit.",
+      },
+    ],
+  },
+  {
+    slug: "hiring-uninsured-landscaping-contractor-risk-las-vegas",
+    title: "The Hidden Risk of Hiring the Cheapest Landscaping Company in Las Vegas",
+    metaTitle: "Uninsured Contractor Risk: What Las Vegas Homeowners Should Know | TerraScapes Landscaping",
+    metaDescription:
+      "A lower bid can come with a real cost — if a landscaping contractor isn't properly licensed and insured, liability for an on-site accident can fall back on the homeowner.",
+    publishedDate: "2026-08-20",
+    heroImage: "/images/hero.jpg",
+    heroImageAlt: "Professional landscape crew working on a Las Vegas property",
+    excerpt:
+      "A lower bid can look appealing until something goes wrong on site — if the contractor isn't properly insured, the liability doesn't just disappear, it often lands on the homeowner.",
+    relatedServiceSlug: "residential-landscaping",
+    ctaEyebrow: "Hire with confidence",
+    sections: [
+      {
+        heading: "Why the lowest bid can cost more later",
+        body: "A big gap between bids is often coming from somewhere — and one of the most common places is insurance. Carrying proper general liability and workers' compensation coverage costs a contractor real money, and cutting it is one of the easiest ways to quote a lower number.",
+      },
+      {
+        heading: "What happens if something goes wrong",
+        body: "If a worker is injured on your property and the contractor doesn't carry workers' compensation, or a mistake causes real property damage with no general liability coverage behind it, that exposure doesn't just disappear — it can land on the homeowner instead of the company that was on site.",
+      },
+      {
+        heading: "Higher-value properties carry more exposure",
+        body: "The larger and more valuable the property, the more there typically is to lose if something goes wrong — which is exactly why this matters most for homeowners who might assume a landscaping company's insurance status is a given.",
+      },
+      {
+        heading: "How to actually check before you hire",
+        body: "Ask directly for proof of current general liability and workers' compensation coverage, and confirm the contractor's Nevada State Contractors Board license is active — a legitimate company will have both ready to show without hesitation.",
       },
     ],
   },
