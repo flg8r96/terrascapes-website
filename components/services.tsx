@@ -35,7 +35,7 @@ const services = [
     copy: "Pavers, walls, patios, steps, and walkways engineered for lasting curb appeal.",
     image: "/images/service-hardscape.jpg",
     icon: BrickWall,
-    href: "/residential-landscaping",
+    href: "/hardscaping",
   },
   {
     title: "Outdoor Living",
@@ -52,11 +52,11 @@ const services = [
     href: "/irrigation-drip-systems",
   },
   {
-    title: "Turf Removal & Xeriscape",
-    copy: "Low-water conversions that replace ordinary lawns with sophisticated desert design.",
+    title: "Turf Removal & Installation",
+    copy: "New sod installation, or turf removal for a xeriscape conversion — whichever direction your yard needs.",
     image: "/images/service-xeriscape.jpg",
     icon: Cactus,
-    href: "/turf-removal-xeriscape",
+    href: "/turf-removal-installation",
   },
   {
     title: "Landscape Maintenance",

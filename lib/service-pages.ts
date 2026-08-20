@@ -20,14 +20,7 @@ export type ServicePage = {
 // beyond the redirect-preservation purpose it serves today.
 export const servicePages: ServicePage[] = [
   {
-    // Intentional URL/topic mismatch: this route is physically named
-    // app/residential-landscaping/ and keeps that slug because it was one of
-    // the original 4 indexed URLs with real Search Console history. The
-    // content below is Hardscaping — there was no homepage service card for
-    // "Residential Landscaping," but there is one for "Hardscaping" with no
-    // page of its own, so we repurposed this URL rather than starting a new
-    // one from zero. Don't "fix" the slug back to residential-landscaping copy.
-    slug: "residential-landscaping",
+    slug: "hardscaping",
     navLabel: "Hardscaping",
     eyebrow: "Hardscaping",
     h1: "Hardscaping in Las Vegas, NV",
@@ -154,6 +147,40 @@ export const servicePages: ServicePage[] = [
     promoted: false,
   },
   {
+    // PLACEHOLDER-CONTENT: an audience-based hub page, not one of the homepage's 6
+    // specific-service tiles — same unpromoted treatment as commercial-landscaping-services.
+    slug: "residential-landscaping",
+    navLabel: "Residential Landscaping",
+    eyebrow: "Residential landscaping",
+    h1: "Residential Landscaping in Las Vegas, NV",
+    metaTitle: "Residential Landscaping Las Vegas, NV | TerraScapes Landscaping",
+    metaDescription:
+      "Full-service residential landscaping for Las Vegas homeowners — design, hardscape, planting, and ongoing care from one team, start to finish. Licensed and insured.",
+    heroImage: "/images/oasis-after.jpg",
+    heroImageAlt: "Completed residential desert landscaping in Las Vegas",
+    intro:
+      "TerraScapes handles residential landscaping the way a homeowner actually experiences it — one team from first design sketch through years of upkeep, not a design firm, a separate install crew, and a maintenance company you have to coordinate yourself.",
+    sections: [
+      {
+        heading: "New yards and full renovations",
+        body: "Whether it's a blank lot on a new build or a tired yard that's never worked, we scope the whole project — grading, planting, hardscape, and irrigation — as one plan instead of a patchwork of unrelated fixes.",
+      },
+      {
+        heading: "One team, start to finish",
+        body: "The same team that designs your yard installs it and maintains it afterward, so nothing gets lost in a handoff and nobody's guessing what a previous crew intended.",
+      },
+      {
+        heading: "Built around how your family lives outside",
+        body: "Kids, pets, entertaining, quiet mornings — the layout follows how the yard actually gets used, not a generic template dropped onto the lot.",
+      },
+      {
+        heading: "Licensed, insured, and local",
+        body: "TerraScapes is licensed, bonded, and insured in Nevada (Lic. #0082269, #0094932), serving homeowners across Las Vegas, Henderson, and Summerlin.",
+      },
+    ],
+    promoted: false,
+  },
+  {
     slug: "irrigation-drip-systems",
     navLabel: "Irrigation & Drip Systems",
     eyebrow: "Irrigation & drip systems",
@@ -185,33 +212,33 @@ export const servicePages: ServicePage[] = [
     ],
   },
   {
-    slug: "turf-removal-xeriscape",
-    navLabel: "Turf Removal & Xeriscape",
-    eyebrow: "Turf removal & xeriscape",
-    h1: "Turf Removal & Xeriscape in Las Vegas, NV",
-    metaTitle: "Turf Removal & Xeriscape Las Vegas, NV | TerraScapes Landscaping",
+    slug: "turf-removal-installation",
+    navLabel: "Turf Removal & Installation",
+    eyebrow: "Turf removal & installation",
+    h1: "Turf Removal & Installation in Las Vegas, NV",
+    metaTitle: "Turf Removal & Installation Las Vegas, NV | TerraScapes Landscaping",
     metaDescription:
-      "Turf removal and xeriscape conversions for Las Vegas yards — lower water bills, rebate-eligible designs, and low-maintenance desert landscaping.",
+      "New sod and turf installation, plus turf removal and xeriscape conversion, for Las Vegas yards. TerraScapes handles both directions. Free estimates.",
     heroImage: "/images/service-xeriscape.jpg",
     heroImageAlt: "Xeriscape yard conversion with desert plants and rock in Las Vegas",
     intro:
-      "Grass lawns are one of the highest water costs a Las Vegas property carries. We convert turf into xeriscape — rock, decomposed granite, and low-water plantings — designed to look intentional, not just empty.",
+      "Whether a yard needs new turf put in or old turf taken out for a xeriscape conversion, it's the same underlying work done right — proper grading, soil prep, and materials suited to Las Vegas conditions either direction you're going.",
     sections: [
       {
-        heading: "Turf removal done right",
-        body: "Removing grass and irrigation down to grade, then prepping soil and drainage properly, is what separates a xeriscape conversion that lasts from one that turns into a weedy gravel lot in two years.",
+        heading: "New sod and turf installation",
+        body: "New construction, a dead or patchy lawn, or a play area for kids and pets — turf installation starts with grading and soil prep, then real sod laid for a lawn that actually holds up to Las Vegas heat and use.",
       },
       {
-        heading: "Rock, gravel, and hardscape base",
-        body: "Decomposed granite, boulders, and accent rock are laid out with the same design attention as a planted bed, so the yard reads as designed rather than simply cleared.",
+        heading: "Turf removal for xeriscape conversion",
+        body: "Going the other direction, we remove grass and irrigation down to grade and prep the soil properly, so the xeriscape conversion that replaces it lasts instead of turning into a weedy gravel lot in two years.",
       },
       {
-        heading: "Low-water plant selection",
-        body: "Desert-adapted trees, shrubs, and accents replace turf's water demand while still giving the yard color, shade, and privacy through the year.",
+        heading: "Rock, gravel, and low-water plant selection",
+        body: "For xeriscape conversions, decomposed granite, boulders, accent rock, and desert-adapted plantings replace turf's water demand while still giving the yard color, shade, and privacy through the year.",
       },
       {
         heading: "Water-district rebate eligible",
-        body: "Turf conversions are designed to meet Southern Nevada Water Authority rebate requirements where applicable, so the upgrade can help offset its own cost.",
+        body: "Turf-to-xeriscape conversions are designed to meet Southern Nevada Water Authority rebate requirements where applicable, so the upgrade can help offset its own cost.",
       },
     ],
   },

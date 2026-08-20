@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ServicePageContent } from "@/components/service-page";
 import { getServicePage } from "@/lib/service-pages";
 
-const page = getServicePage("turf-removal-xeriscape");
+const page = getServicePage("turf-removal-installation");
 const SITE_URL = "https://terrascapeslv.com";
 
 export const metadata: Metadata = {
@@ -26,6 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TurfRemovalXeriscapePage() {
+export default function TurfRemovalInstallationPage() {
   return <ServicePageContent page={page} />;
 }
