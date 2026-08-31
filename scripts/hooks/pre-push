@@ -1,18 +1,39 @@
 #!/bin/sh
-# niftly3d push gate (no-cost enforcement of "all pushes require approval").
-# Blocks every direct `git push` from this repo. The ONLY sanctioned push path is the
-# approved autopush flow (autopush-helper.js), which runs the push with NIFTLY_AUTOPUSH=1
-# after Matt approves in #pushes. This stops agents (Dev Guy) from pushing main directly
-# and bypassing the gate. Not versioned by git itself -- installed into .git/hooks/
-# (run scripts/install-hooks.sh after clone).
+# niftly3d push gate (no-cost enforcement of "all pushes to main require approval").
+# Blocks direct pushes to `main` only -- feature/topic branches push freely, since they
+# don't deploy anything and don't bypass approval (nothing reaches production until main
+# moves). The ONLY sanctioned path for main is the approved autopush flow (autopush-helper.js
+# / the remote autopush-watcher), which pushes with NIFTLY_AUTOPUSH=1 after Matt approves in
+# #pushes.
+#
+# Narrowed 2026-08-31 -- previously blocked ALL pushes unconditionally, which meant a feature
+# branch commit could not reach GitHub at all from a local dev machine, which in turn meant the
+# remote autopush-watcher (which pushes main via a GitHub API ref-update against a commit that
+# must already exist on GitHub) had nothing to fast-forward main to. Ported from the same fix
+# already applied to niftly3d-it-guy-service 2026-08-26 -- this repo's own copy never got it,
+# which is exactly why commits kept silently failing to reach GitHub here. Not versioned by git
+# itself -- installed into .git/hooks/ (run scripts/install-hooks.sh after clone).
 if [ "$NIFTLY_AUTOPUSH" = "1" ]; then
   exit 0
 fi
+
+blocked=0
+while read local_ref local_sha remote_ref remote_sha || [ -n "$remote_ref" ]; do
+  if [ "$remote_ref" = "refs/heads/main" ]; then
+    blocked=1
+  fi
+done
+
+if [ "$blocked" = "0" ]; then
+  exit 0
+fi
+
 echo "" >&2
 echo "==============================================================" >&2
-echo " Direct push BLOCKED by the niftly3d push gate." >&2
-echo " Every push to main must be approved in #pushes and pushed via" >&2
-echo " the autopush flow. Nothing reaches production un-approved." >&2
+echo " Direct push to main BLOCKED by the niftly3d push gate." >&2
+echo " main must be approved in #pushes and pushed via the autopush" >&2
+echo " flow. Nothing reaches production un-approved. Feature/topic" >&2
+echo " branches push freely -- only main is gated." >&2
 echo "" >&2
 echo " Emergency override (Matt only): NIFTLY_AUTOPUSH=1 git push ..." >&2
 echo "==============================================================" >&2
