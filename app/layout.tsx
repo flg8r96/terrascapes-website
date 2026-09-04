@@ -6,6 +6,11 @@ const GA4_ID = "G-13BMQSDZT6";
 // Ryan's Google Ads conversion tag — broke when the site moved off its old host;
 // this restores it. Pulled straight from Google Ads' own "Install a Google tag" screen.
 const GOOGLE_ADS_ID = "G-0P4TRGNZGR";
+// Conversion tag for a new ad campaign (Matt, 2026-09-04) — a separate tag from GOOGLE_ADS_ID,
+// not a replacement. gtag.js supports multiple config calls side by side; swapping either
+// existing ID for this one would break the site's core GA4 analytics or Ryan's existing
+// campaign's conversion tracking.
+const NEW_CAMPAIGN_AD_ID = "G-VY40S5XV1D";
 
 const SITE_URL = "https://terrascapeslv.com";
 const TITLE = "TerraScapes Landscaping | Las Vegas Desert Landscape Design";
@@ -77,6 +82,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             gtag('js', new Date());
             gtag('config', '${GA4_ID}');
             gtag('config', '${GOOGLE_ADS_ID}');
+            gtag('config', '${NEW_CAMPAIGN_AD_ID}');
           `}
         </Script>
         {children}
