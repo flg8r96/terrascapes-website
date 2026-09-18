@@ -3,11 +3,12 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { Contact } from "@/components/contact";
 import { LeadFocus } from "@/components/lead-focus";
+import { PhoneLink } from "@/components/phone-link";
 import { Reveal } from "@/components/reveal";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TrustStrip } from "@/components/trust-strip";
-import { Button } from "@/components/ui/button";
+import { Button, buttonClasses } from "@/components/ui/button";
 
 const SITE_URL = "https://terrascapeslv.com";
 const TITLE = "Request a Quote | TerraScapes Landscaping, Las Vegas";
@@ -65,9 +66,9 @@ export default function InquiryPage() {
               <Button href="#contact" size="lg" className="w-full sm:w-auto">
                 Get your quote
               </Button>
-              <Button href="tel:+17026001167" variant="outline" size="lg" className="w-full sm:w-auto">
+              <PhoneLink className={buttonClasses({ variant: "outline", size: "lg", className: "w-full sm:w-auto" })}>
                 <Phone className="mr-2 h-4 w-4" /> (702) 600-1167
-              </Button>
+              </PhoneLink>
             </div>
           </Reveal>
         </div>

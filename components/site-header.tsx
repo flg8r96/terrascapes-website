@@ -2,6 +2,7 @@
 
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import { PhoneLink } from "@/components/phone-link";
 import { TerraScapesLogo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 
@@ -41,9 +42,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-5 lg:flex">
-          <a href="#contact" className="flex items-center gap-2 text-sm font-semibold text-white">
+          <PhoneLink className="flex items-center gap-2 text-sm font-semibold text-white">
             <Phone className="h-4 w-4" /> (702) 600-1167
-          </a>
+          </PhoneLink>
           <Button href="#contact" size="sm">Free Estimate</Button>
         </div>
 
@@ -71,13 +72,12 @@ export function SiteHeader() {
                 {label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
+            <PhoneLink
+              onNavigate={() => setOpen(false)}
               className="flex items-center gap-2 pt-2 font-semibold text-white"
             >
               <Phone className="h-4 w-4 text-[var(--brand)]" /> (702) 600-1167
-            </a>
+            </PhoneLink>
             <Button href="#contact" className="w-full" onClick={() => setOpen(false)}>Free Estimate</Button>
           </nav>
         </div>
