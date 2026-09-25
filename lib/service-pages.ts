@@ -214,19 +214,23 @@ export const servicePages: ServicePage[] = [
   {
     slug: "turf-removal-installation",
     navLabel: "Turf Removal & Installation",
-    eyebrow: "Turf removal & installation",
-    h1: "Turf Removal & Installation in Las Vegas, NV",
-    metaTitle: "Turf Removal & Installation Las Vegas, NV | TerraScapes Landscaping",
+    eyebrow: "Artificial turf, sod & turf removal",
+    h1: "Artificial Turf, Sod & Turf Removal in Las Vegas, NV",
+    metaTitle: "Artificial Turf & Sod Installation Las Vegas, NV | TerraScapes Landscaping",
     metaDescription:
-      "New sod and turf installation, plus turf removal and xeriscape conversion, for Las Vegas yards. TerraScapes handles both directions. Free estimates.",
+      "Artificial turf and real sod installation, plus grass removal and xeriscape conversion, for Las Vegas yards. Pet turf and putting greens too. Free estimates.",
     heroImage: "/images/service-xeriscape.jpg",
     heroImageAlt: "Xeriscape yard conversion with desert plants and rock in Las Vegas",
     intro:
-      "Whether a yard needs new turf put in or old turf taken out for a xeriscape conversion, it's the same underlying work done right — proper grading, soil prep, and materials suited to Las Vegas conditions either direction you're going.",
+      "Artificial turf, real sod, or taking grass out for a xeriscape conversion — it's the same underlying work done right: proper grading, base and soil prep, and materials suited to Las Vegas conditions whichever direction you're going.",
     sections: [
       {
-        heading: "New sod and turf installation",
-        body: "New construction, a dead or patchy lawn, or a play area for kids and pets — turf installation starts with grading and soil prep, then real sod laid for a lawn that actually holds up to Las Vegas heat and use.",
+        heading: "Artificial turf installation",
+        body: "Artificial grass that looks right and drains right starts below the surface: old grass and soil removed, a compacted base laid for drainage, then the turf cut, seamed, and secured so edges and seams stay tight in Las Vegas heat. Pet turf for dog runs and putting greens for the backyard are installed the same way.",
+      },
+      {
+        heading: "Real sod installation",
+        body: "New construction, a dead or patchy lawn, or a play area for kids and pets — sod installation starts with grading and soil prep, then real sod laid for a lawn that actually holds up to Las Vegas heat and use.",
       },
       {
         heading: "Turf removal for xeriscape conversion",
