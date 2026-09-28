@@ -53,7 +53,7 @@ const services = [
   },
   {
     title: "Turf Removal & Installation",
-    copy: "New sod installation, or turf removal for a xeriscape conversion — whichever direction your yard needs.",
+    copy: "Artificial turf from $5/sq ft with a 15-year warranty — or turf removal for a rebate up to $7/sq ft.",
     image: "/images/service-xeriscape.jpg",
     icon: Cactus,
     href: "/turf-removal-installation",

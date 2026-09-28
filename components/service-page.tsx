@@ -8,6 +8,21 @@ import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import { servicePages, type ServicePage } from "@/lib/service-pages";
 
+// service-pages.ts copy can mark up a phrase with **double asterisks** to bold it
+// (a warranty term, a price, a number worth the reader's eye stopping on) without
+// reaching for a markdown renderer or letting raw HTML into a plain-text data file.
+function withBold(text: string, strongClassName = "font-semibold text-[var(--ink)]") {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={i} className={strongClassName}>
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      part
+    ),
+  );
+}
+
 // Shared shell for the 4 rebuilt service pages (residential/design/outdoor-living/
 // commercial) — each app/<slug>/page.tsx just supplies its ServicePage data and
 // metadata. Keeps the 4 pages visually identical and on-token without repeating
@@ -39,7 +54,9 @@ export function ServicePageContent({ page }: { page: ServicePage }) {
             </nav>
             <p className="eyebrow">{page.eyebrow}</p>
             <h1 className="section-title mt-3 max-w-3xl text-white">{page.h1}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-white/75">{page.intro}</p>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/75">
+              {withBold(page.intro, "font-semibold text-white")}
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href="#contact" size="lg" className="w-full sm:w-auto">Get a free estimate</Button>
             </div>
@@ -53,7 +70,7 @@ export function ServicePageContent({ page }: { page: ServicePage }) {
           {page.sections.map((section, index) => (
             <Reveal key={section.heading} delay={index * 0.06}>
               <h2 className="font-serif text-2xl text-[var(--ink)] sm:text-3xl">{section.heading}</h2>
-              <p className="mt-2 text-sm leading-7 text-black/60 sm:text-base">{section.body}</p>
+              <p className="mt-2 text-sm leading-7 text-black/60 sm:text-base">{withBold(section.body)}</p>
             </Reveal>
           ))}
         </div>

@@ -218,15 +218,23 @@ export const servicePages: ServicePage[] = [
     h1: "Artificial Turf, Sod & Turf Removal in Las Vegas, NV",
     metaTitle: "Artificial Turf & Sod Installation Las Vegas, NV | TerraScapes Landscaping",
     metaDescription:
-      "Artificial turf and real sod installation, plus grass removal and xeriscape conversion, for Las Vegas yards. Pet turf and putting greens too. Free estimates.",
+      "Artificial turf from $5/sq ft with a 15-year warranty, plus grass removal rebates up to $7/sq ft. Sod install & xeriscape conversion. Free estimates.",
     heroImage: "/images/service-xeriscape.jpg",
     heroImageAlt: "Xeriscape yard conversion with desert plants and rock in Las Vegas",
     intro:
-      "Artificial turf, real sod, or taking grass out for a xeriscape conversion — it's the same underlying work done right: proper grading, base and soil prep, and materials suited to Las Vegas conditions whichever direction you're going.",
+      "Installed artificial turf starting at just **$5 per square foot**, backed by a full **15-year warranty** on the turf and our installation. Real sod, or turf removal for a xeriscape conversion that can pay you back — it's the same underlying work done right: proper grading, base and soil prep, and materials suited to Las Vegas conditions whichever direction you're going.",
     sections: [
       {
-        heading: "Artificial turf installation",
-        body: "Artificial grass that looks right and drains right starts below the surface: old grass and soil removed, a compacted base laid for drainage, then the turf cut, seamed, and secured so edges and seams stay tight in Las Vegas heat. Pet turf for dog runs and putting greens for the backyard are installed the same way.",
+        heading: "Artificial turf, starting at $5 per square foot",
+        body: "Installed artificial turf starts at just **$5 per square foot** — a real number you can plan around, not a lowball quote that grows once we're on site. Old grass and soil come out, a compacted base goes down for drainage, then the turf is cut, seamed, and secured so edges and seams stay tight through Las Vegas heat instead of curling or shifting. Pet turf for dog runs and putting greens for the backyard are installed the same careful way.",
+      },
+      {
+        heading: "A 15-year warranty, because we stand behind it",
+        body: "Every artificial turf installation is backed by a **15-year warranty** on the turf itself and on our installation work — real coverage, not a pamphlet promise. If something about the turf or the install ever falls short, we make it right. (This warranty covers turf; live plantings are covered separately.)",
+      },
+      {
+        heading: "Get paid to remove your grass — up to $7 per square foot",
+        body: "Replacing old grass with xeriscape doesn't just cut your water bill, it can put real cash in your pocket. The Southern Nevada Water Authority pays **$5 per square foot** back (on the first 10,000 sq ft), and the Las Vegas Valley Water District adds another **$2 per square foot** for its customers — **up to $7 per square foot combined**. On an average 2,000 sq ft lawn, that's a **$10,000–$14,000 check** made out to you. And you don't have to figure out the paperwork: **we handle the entire rebate process for you** — the application, scheduling the required inspection before any grass comes out (removing it too early forfeits the rebate), designing the new landscape to the district's rules, and booking the final sign-off.",
       },
       {
         heading: "Real sod installation",
@@ -238,11 +246,7 @@ export const servicePages: ServicePage[] = [
       },
       {
         heading: "Rock, gravel, and low-water plant selection",
-        body: "For xeriscape conversions, decomposed granite, boulders, accent rock, and desert-adapted plantings replace turf's water demand while still giving the yard color, shade, and privacy through the year.",
-      },
-      {
-        heading: "Water-district rebate eligible",
-        body: "Turf-to-xeriscape conversions are designed to meet Southern Nevada Water Authority rebate requirements where applicable, so the upgrade can help offset its own cost.",
+        body: "Decomposed granite, boulders, accent rock, and desert-adapted plantings replace turf's water demand while still giving the yard color, shade, and privacy through the year.",
       },
     ],
   },
