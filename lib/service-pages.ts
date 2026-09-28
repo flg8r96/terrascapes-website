@@ -84,27 +84,27 @@ export const servicePages: ServicePage[] = [
   {
     slug: "outdoor-living-design",
     navLabel: "Outdoor Living Design",
-    eyebrow: "Outdoor living",
-    h1: "Outdoor Living Design in Las Vegas, NV",
-    metaTitle: "Outdoor Living Design Las Vegas, NV | TerraScapes Landscaping",
+    eyebrow: "Patio covers, BBQ islands & outdoor living",
+    h1: "Patio Covers, BBQ Islands & Outdoor Living in Las Vegas, NV",
+    metaTitle: "Patio Covers & BBQ Islands Las Vegas, NV | TerraScapes Landscaping",
     metaDescription:
-      "Fire features, outdoor kitchens, pergolas, and shade structures designed for Las Vegas backyards. TerraScapes builds resort-style outdoor living spaces.",
+      "Alumawood patio covers, BBQ islands, outdoor kitchens, and fire features for Las Vegas backyards — designed and built by one crew. Free estimates.",
     heroImage: "/images/service-outdoor.jpg",
     heroImageAlt: "Outdoor living space with fire feature and seating in a Las Vegas backyard",
     intro:
-      "Las Vegas backyards live outside most of the year. We design outdoor living spaces — kitchens, fire features, shade, and seating — built to handle the heat and get used, not just photographed.",
+      "Las Vegas backyards live outside most of the year. We design and build the pieces that make that possible — patio covers for shade, BBQ islands and outdoor kitchens, fire features, and seating — built to handle the heat and get used, not just photographed.",
     sections: [
       {
-        heading: "Outdoor kitchens and fire features",
-        body: "Built-in grills, counters, and fire features designed around how you actually entertain, using materials rated for outdoor Las Vegas conditions.",
+        heading: "Patio covers",
+        body: "Alumawood patio covers, including insulated upgrades that keep the space underneath cooler, cut direct sun so a backyard is usable for more of the day, not just after sunset. Sized and placed to shade the seating and kitchen areas where you actually spend time.",
       },
       {
-        heading: "Shade structures and pergolas",
-        body: "Pergolas, ramadas, and shade sails cut down direct sun exposure so a backyard is usable for more of the day, not just after sunset.",
+        heading: "BBQ islands and outdoor kitchens",
+        body: "Built-in grills, counters, and BBQ islands designed around how you actually entertain, using materials rated for outdoor Las Vegas conditions.",
       },
       {
-        heading: "Seating and gathering areas",
-        body: "Patios and seating areas are laid out around the fire feature and kitchen so the whole space functions as one outdoor room instead of separate, disconnected zones.",
+        heading: "Fire features and gathering areas",
+        body: "Fire features, patios, and seating are laid out around the kitchen and patio cover so the whole space functions as one outdoor room instead of separate, disconnected zones.",
       },
       {
         heading: "Built to handle the heat",
