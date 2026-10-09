@@ -44,7 +44,10 @@ export function SiteFooter() {
       </div>
       <div className="mx-auto flex max-w-[1440px] flex-col gap-3 pt-7 text-[11px] text-white/38 sm:flex-row sm:justify-between">
         <span>© 2026 TerraScapes Landscaping. All rights reserved.</span>
-        <a href="#" className="hover:text-white">Privacy Policy</a>
+        <span className="flex gap-5">
+          <a href="/privacy" className="hover:text-white">Privacy Policy</a>
+          <a href="/sms-terms" className="hover:text-white">SMS Terms</a>
+        </span>
       </div>
     </footer>
   );
