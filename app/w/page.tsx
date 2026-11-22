@@ -97,11 +97,12 @@ export default function WateringStakePage() {
       </section>
 
       {/* Setup + tips */}
-      <section id="setup" className="scroll-mt-24 bg-[var(--cream)] px-5 py-16 lg:px-8 lg:py-24">
+      {/* One dark ground for the whole page (hero, setup, offers, footer): no cream bands. */}
+      <section id="setup" className="scroll-mt-24 border-t border-white/10 bg-[#07100d] px-5 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-[1240px] items-start gap-12 lg:grid-cols-[360px_1fr] lg:gap-16">
           <Reveal>
             <video
-              className="mx-auto aspect-[9/16] w-full max-w-[360px] rounded-md bg-black shadow-xl"
+              className="mx-auto aspect-[9/16] w-full max-w-[360px] rounded-md border border-white/10 bg-black shadow-xl"
               src="/videos/watering-stake-setup.mp4"
               poster="/images/watering-stake-poster.jpg"
               controls
@@ -115,28 +116,28 @@ export default function WateringStakePage() {
           <div>
             <Reveal>
               <p className="eyebrow">30-second setup</p>
-              <h2 className="section-title mt-3 text-[var(--ink)]">How to use it</h2>
+              <h2 className="section-title mt-3 text-white">How to use it</h2>
               <ol className="mt-8 grid gap-4">
                 {steps.map((step, i) => (
                   <li key={step} className="flex gap-4">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--brand)] text-sm font-bold text-white">
                       {i + 1}
                     </span>
-                    <span className="pt-1 text-base leading-7 text-black/75">{step}</span>
+                    <span className="pt-1 text-base leading-7 text-white/75">{step}</span>
                   </li>
                 ))}
               </ol>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <h3 className="mt-14 flex items-center gap-2 font-serif text-3xl text-[var(--ink)]">
+              <h3 className="mt-14 flex items-center gap-2 font-serif text-3xl text-white">
                 <Droplets className="h-6 w-6 text-[var(--brand)]" /> Watering tips
               </h3>
               <div className="mt-6 grid gap-x-8 gap-y-6 sm:grid-cols-2">
                 {tips.map((tip) => (
                   <div key={tip.title}>
-                    <p className="text-sm font-bold uppercase tracking-[0.08em] text-[var(--ink)]">{tip.title}</p>
-                    <p className="mt-1.5 text-sm leading-6 text-black/60">{tip.body}</p>
+                    <p className="text-sm font-bold uppercase tracking-[0.08em] text-white">{tip.title}</p>
+                    <p className="mt-1.5 text-sm leading-6 text-white/60">{tip.body}</p>
                   </div>
                 ))}
               </div>
@@ -147,7 +148,7 @@ export default function WateringStakePage() {
 
       {/* Offers. id="contact" so the header's Contact / Free Estimate / phone
           (desktop) links land here; LeadFocus focuses #lead-name. */}
-      <section id="contact" className="scroll-mt-24 bg-[#07100d] px-5 py-16 lg:px-8 lg:py-24">
+      <section id="contact" className="scroll-mt-24 border-t border-white/10 bg-[#07100d] px-5 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-[1240px]">
           <Reveal>
             <p className="eyebrow">Beyond the pot</p>
@@ -158,13 +159,23 @@ export default function WateringStakePage() {
           </Reveal>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            <Reveal className="rounded-md bg-[var(--cream)] p-6 sm:p-8">
+            <Reveal className="overflow-hidden rounded-md border border-white/10 bg-white/[0.04]">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/images/service-outdoor.jpg"
+                  alt="Covered patio with an outdoor kitchen, bar seating and a fire feature"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 600px, 100vw"
+                />
+              </div>
+              <div className="p-6 sm:p-8">
               <p className="eyebrow">Option 1</p>
-              <h3 className="mt-2 font-serif text-3xl text-[var(--ink)]">Redesign your yard</h3>
-              <p className="mt-3 text-sm leading-6 text-black/65">
+              <h3 className="mt-2 font-serif text-3xl text-white">Redesign your yard</h3>
+              <p className="mt-3 text-sm leading-6 text-white/65">
                 Start over with a yard built for the desert. One crew designs and builds it.
               </p>
-              <ul className="mt-4 grid gap-2 text-sm text-black/70">
+              <ul className="mt-4 grid gap-2 text-sm text-white/75">
                 {[
                   "Low-water desert plantings and drip irrigation",
                   "Artificial turf, pavers and patios",
@@ -176,15 +187,26 @@ export default function WateringStakePage() {
                 ))}
               </ul>
               <StakeLeadForm offer="redesign" nameId="lead-name" />
+              </div>
             </Reveal>
 
-            <Reveal delay={0.08} className="rounded-md bg-[var(--cream)] p-6 sm:p-8">
+            <Reveal delay={0.08} className="overflow-hidden rounded-md border border-white/10 bg-white/[0.04]">
+              <div className="relative aspect-[3/2]">
+                <Image
+                  src="/images/service-maintenance.jpg"
+                  alt="Well-kept desert backyard with a patio, fire pit and pergola"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 600px, 100vw"
+                />
+              </div>
+              <div className="p-6 sm:p-8">
               <p className="eyebrow">Option 2</p>
-              <h3 className="mt-2 font-serif text-3xl text-[var(--ink)]">Maintain the yard you have</h3>
-              <p className="mt-3 text-sm leading-6 text-black/65">
+              <h3 className="mt-2 font-serif text-3xl text-white">Maintain the yard you have</h3>
+              <p className="mt-3 text-sm leading-6 text-white/65">
                 Like your landscaping? We’ll keep it that way with scheduled visits.
               </p>
-              <ul className="mt-4 grid gap-2 text-sm text-black/70">
+              <ul className="mt-4 grid gap-2 text-sm text-white/75">
                 {[
                   "Irrigation checks for broken emitters and clogged lines",
                   "Pruning and seasonal cleanup",
@@ -196,6 +218,7 @@ export default function WateringStakePage() {
                 ))}
               </ul>
               <StakeLeadForm offer="maintenance" />
+              </div>
             </Reveal>
           </div>
 

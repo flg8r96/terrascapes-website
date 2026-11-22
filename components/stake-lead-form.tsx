@@ -124,7 +124,7 @@ export function StakeLeadForm({ offer, nameId }: { offer: Offer; nameId?: string
         </Button>
         {message && (
           <p
-            className={`mt-3 text-sm font-medium ${status === "error" ? "text-red-600" : "text-[var(--ink)]"}`}
+            className={`mt-3 text-sm font-medium ${status === "error" ? "text-red-300" : "text-white"}`}
             role="status"
           >
             {message}
