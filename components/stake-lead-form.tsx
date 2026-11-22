@@ -13,8 +13,9 @@ type Status = "idle" | "sending" | "done" | "error";
 
 // The command center requires message, budget and financing for site=terrascapes
 // (the office whisper reads them back). The message leads with the offer so the
-// whisper says what the caller wants first. Financing isn't asked here
-// (TerraScapes prefers not to promote it), so it's sent as an honest "Not asked".
+// whisper says what the caller wants first. The redesign form asks the same
+// budget, financing and job-description questions as the main form
+// (components/contact.tsx); maintenance doesn't ask financing, so it sends "Not asked".
 const OFFERS: Record<Offer, { service: string; label: string }> = {
   redesign: { service: "Yard redesign (watering stake page)", label: "Yard redesign" },
   maintenance: { service: "Landscape maintenance (watering stake page)", label: "Maintenance" },
@@ -59,7 +60,7 @@ export function StakeLeadForm({ offer, nameId }: { offer: Offer; nameId?: string
           phone: data.get("phone"),
           email: data.get("email"),
           budget,
-          financing: "Not asked",
+          financing: offer === "redesign" ? data.get("financing") : "Not asked",
           message: lead,
           company_url: data.get("company_url"),
         }),
@@ -86,14 +87,22 @@ export function StakeLeadForm({ offer, nameId }: { offer: Offer; nameId?: string
       <input className="field" name="phone" placeholder="Phone number" type="tel" autoComplete="tel" required />
       <input className="field" name="email" placeholder="Email address" type="email" autoComplete="email" required />
       {offer === "redesign" ? (
-        <select className="field" name="choice" defaultValue="" required>
-          <option value="">Estimated budget</option>
-          <option>Under $5,000</option>
-          <option>$5,000–$15,000</option>
-          <option>$15,000–$40,000</option>
-          <option>$40,000+</option>
-          <option>Not sure yet</option>
-        </select>
+        <>
+          <select className="field" name="choice" defaultValue="" required>
+            <option value="">Estimated budget</option>
+            <option>Under $5,000</option>
+            <option>$5,000–$15,000</option>
+            <option>$15,000–$40,000</option>
+            <option>$40,000+</option>
+            <option>Not sure yet</option>
+          </select>
+          <select className="field" name="financing" defaultValue="" required>
+            <option value="">Interested in financing?</option>
+            <option value="Yes">Yes, tell me about financing</option>
+            <option value="No">No financing needed</option>
+            <option value="Not sure">Maybe / not sure</option>
+          </select>
+        </>
       ) : (
         <select className="field" name="choice" defaultValue="" required>
           <option value="">How often?</option>
@@ -106,9 +115,10 @@ export function StakeLeadForm({ offer, nameId }: { offer: Offer; nameId?: string
       <textarea
         className="field min-h-24 resize-y"
         name="notes"
+        required={offer === "redesign"}
         placeholder={
           offer === "redesign"
-            ? "What would you change? (optional)"
+            ? "Job description — what do you need done?"
             : "Front, back, or both? Anything we should know? (optional)"
         }
       />
