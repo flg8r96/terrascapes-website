@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         destination: "/turf-removal-installation",
         permanent: true,
       },
+      // Short path for a future watering stake tag (v9+). Uppercase
+      // HTTPS://TERRASCAPESLV.COM/W keeps the QR in alphanumeric mode.
+      // Temporary, so the destination can change without browsers caching it.
+      { source: "/w", destination: "/watering-stake", permanent: false },
+      { source: "/W", destination: "/watering-stake", permanent: false },
     ];
   },
 };

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { ArrowRight, Droplets, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 
@@ -20,6 +20,16 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[760px] max-w-[1440px] items-center px-5 pb-24 pt-36 lg:min-h-[790px] lg:px-8 lg:pb-32 lg:pt-32">
         <div className="max-w-[720px]">
           <Reveal>
+            {/* The watering stake tag's QR lands on this homepage (locked v8 tag
+                encodes HTTPS://TERRASCAPESLV.COM/), so scanners need a visible way in. */}
+            <a
+              href="/watering-stake"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--brand)]/60 bg-black/40 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm transition hover:border-[var(--brand)] hover:bg-[var(--brand)]"
+            >
+              <Droplets className="h-4 w-4 shrink-0 text-[var(--brand)]" aria-hidden="true" />
+              Got a TerraScapes watering stake? Setup and watering tips
+              <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            </a>
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.26em] text-[var(--brand)]">
               Las Vegas desert landscapes
             </p>
