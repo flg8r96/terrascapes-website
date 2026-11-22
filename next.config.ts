@@ -18,12 +18,14 @@ const nextConfig: NextConfig = {
         destination: "/turf-removal-installation",
         permanent: true,
       },
-      // Short path for a future watering stake tag (v9+). Uppercase
-      // HTTPS://TERRASCAPESLV.COM/W keeps the QR in alphanumeric mode.
-      // Temporary, so the destination can change without browsers caching it.
-      { source: "/w", destination: "/watering-stake", permanent: false },
-      { source: "/W", destination: "/watering-stake", permanent: false },
     ];
+  },
+  // Watering stake tag v9 prints HTTPS://TERRASCAPESLV.COM/W (uppercase keeps the
+  // QR at version 2, level Q). Routes are case-sensitive, so /W is served from the
+  // /w page by a rewrite: one hop, address bar stays /W. PERMANENT: every printed
+  // tag depends on /W returning the landing page. Never remove or redirect it.
+  async rewrites() {
+    return [{ source: "/W", destination: "/w" }];
   },
 };
 

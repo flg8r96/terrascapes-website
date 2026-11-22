@@ -23,7 +23,7 @@ export function Hero() {
             {/* The watering stake tag's QR lands on this homepage (locked v8 tag
                 encodes HTTPS://TERRASCAPESLV.COM/), so scanners need a visible way in. */}
             <a
-              href="/watering-stake"
+              href="/w"
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--brand)]/60 bg-black/40 px-4 py-2 text-xs font-semibold text-white backdrop-blur-sm transition hover:border-[var(--brand)] hover:bg-[var(--brand)]"
             >
               <Droplets className="h-4 w-4 shrink-0 text-[var(--brand)]" aria-hidden="true" />

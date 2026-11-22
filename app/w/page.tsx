@@ -11,8 +11,8 @@ import { Button, buttonClasses } from "@/components/ui/button";
 
 // Landing page for people who got the TerraScapes watering stake (promo gift).
 // The locked v8 tag's QR encodes the homepage (HTTPS://TERRASCAPESLV.COM/), so
-// scans reach this page through the stake link in components/hero.tsx. /w
-// redirects here (next.config.ts) for a future tag version.
+// v8 test tags reach this page through the stake link in components/hero.tsx.
+// Tag v9 encodes HTTPS://TERRASCAPESLV.COM/W, served here by a rewrite in next.config.ts.
 const TITLE = "Your Watering Stake | TerraScapes Landscaping, Las Vegas";
 const DESCRIPTION =
   "Set up your TerraScapes watering stake in 30 seconds, plus watering tips for Las Vegas pots and yards.";
@@ -20,7 +20,7 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/watering-stake" },
+  alternates: { canonical: "/w" },
   // Gift landing page: keep it out of search results and the sitemap.
   robots: { index: false, follow: true },
 };
