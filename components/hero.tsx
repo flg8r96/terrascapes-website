@@ -30,9 +30,6 @@ export function Hero() {
               Got a TerraScapes watering stake? Setup and watering tips
               <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
             </a>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.26em] text-[var(--brand)]">
-              Las Vegas desert landscapes
-            </p>
             <h1 className="font-serif text-[clamp(3.5rem,7.8vw,7.5rem)] leading-[0.84] tracking-[-0.04em] text-white">
               Your yard,
               <span className="mt-3 block text-[var(--brand)]">transformed.</span>
@@ -41,7 +38,7 @@ export function Hero() {
 
           <Reveal delay={0.12}>
             <h2 className="mt-7 text-sm font-bold uppercase tracking-[0.14em] text-white sm:text-base">
-              Desert landscapes. Built to inspire.
+              Designed and built by one crew.
             </h2>
             <p className="mt-5 max-w-lg text-base leading-7 text-white/75 sm:text-lg">
               Award-winning design. Expert craftsmanship. Built for the way Las Vegas lives.
