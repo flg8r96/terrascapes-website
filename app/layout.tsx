@@ -13,9 +13,9 @@ const GOOGLE_ADS_ID = "G-0P4TRGNZGR";
 const NEW_CAMPAIGN_AD_ID = "G-VY40S5XV1D";
 
 const SITE_URL = "https://terrascapeslv.com";
-const TITLE = "TerraScapes Landscaping | Las Vegas Desert Landscape Design";
+const TITLE = "TerraScapes Landscaping | Las Vegas Landscaping & Hardscaping";
 const DESCRIPTION =
-  "Luxury desert landscaping, hardscaping, outdoor living, xeriscape, irrigation, and maintenance in Las Vegas, Henderson, and Summerlin.";
+  "Landscaping, hardscaping, patios and outdoor living, turf, irrigation, and maintenance in Las Vegas, Henderson, and Summerlin. Designed and built by one crew.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: "TerraScapes Landscaping",
-    images: [{ url: "/images/hero.jpg", width: 2400, height: 1500, alt: "Desert landscaping by TerraScapes" }],
+    images: [{ url: "/images/hero.jpg", width: 2400, height: 1500, alt: "Landscaping by TerraScapes" }],
     locale: "en_US",
     type: "website",
   },
